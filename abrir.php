@@ -85,9 +85,9 @@ if (!($conn = @pg_connect("host=$DB_SERVIDOR dbname=$DB_BASE port=$DB_PORTA user
 db_logsmanual_demais(_M(MENSAGEM . "abrindo_sistema", $oParametrosMsg));
 
 /**
- * Valida Tentativas de login do usuário
+ * Valida Tentativas de login do usuÃ¡rio
  *
- * Buscamos o parametro de configuração do número de
+ * Buscamos o parametro de configuraÃ§Ã£o do nÃºmero de
  * tentativas de acesso ao portal
  */
 $oPreferenciaCliente     = new PreferenciaCliente();
@@ -124,7 +124,7 @@ if (!empty($_SESSION['DB_tentativasAcesso'])) {
 $iTotalTentativas = array_sum((array) $oTentativasAcesso);
 
 /**
- * Verifica se a variável foi setada
+ * Verifica se a variÃ¡vel foi setada
  */
 $lUtilizaCaptcha = (isset($lUtilizaCaptcha) && $lUtilizaCaptcha);
 
@@ -173,7 +173,7 @@ if (!empty($oTentativasAcesso->$DB_login)) {
   if ($oTentativasAcesso->$DB_login > $iTentativasLoginCliente) {
 
     /**
-     * Bloqueamos o usuário
+     * Bloqueamos o usuÃ¡rio
      */
     $sSqlBloqueiaUsuario  = "update db_usuarios                  ";
     $sSqlBloqueiaUsuario .= "   set usuarioativo  = 2            ";
@@ -201,7 +201,7 @@ db_putsession("DB_tentativasAcesso", $oTentativasAcesso);
 
 /**
  * Habilita acesso apenas para usuarios do e-cidade usuext = 0 negando para:
- * 1 - Usuário Externo
+ * 1 - UsuÃ¡rio Externo
  * 2 - Perfil
  */
 $sSql  = "select *                     \n";
@@ -217,7 +217,7 @@ if ($DB_login != 'dbseller' && pg_num_rows($result) > 0 && pg_result($result, 0,
   $result1 = db_query($conn, "select db21_ativo from db_config
   join db_userinst on db_config.codigo = db_userinst.id_instit
   join db_usuarios on db_usuarios.id_usuario=db_userinst.id_usuario
-  where db_usuarios.id_usuario=" . pg_result($result, 0, "id_usuario")) or die("Erro ao verificar se sistema está liberado! Contate suporte!");
+  where db_usuarios.id_usuario=" . pg_result($result, 0, "id_usuario")) or die("Erro ao verificar se sistema estÃ¡ liberado! Contate suporte!");
   $ativo   = pg_result($result1, 0, 0);
 
   if ($ativo == 3) {
@@ -338,7 +338,7 @@ if (pg_numrows($result) == 0 or pg_numrows($result1) == 0) {
   db_putsession("DB_administrador", pg_result($result, 0, "administrador"));
 
   /**
-   * Realiza a busca das preferências do usuário.
+   * Realiza a busca das preferÃªncias do usuÃ¡rio.
    */
   $oUsuarioSistema = new UsuarioSistema(pg_result($result, 0, "id_usuario"));
   $sPreferencias   = serialize($oPreferenciaUsuario = $oUsuarioSistema->getPreferenciasUsuario());
@@ -412,73 +412,19 @@ if (pg_numrows($result) == 0 or pg_numrows($result1) == 0) {
     <meta http-equiv="Expires" CONTENT="0">
     <link href="estilos.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
-      wname = 'wname' + Math.floor(Math.random() * 10000);
-      var nav = navigator.appName;
-      var ver = navigator.appVersion;
-      var age = navigator.userAgent;
-      sizeWidth = screen.availWidth;
-      sizeHeight = screen.availHeight;
-
-      if (age.indexOf("Firefox") != -1) {
-        debugger;
-        jan = window.open('inicio.php?uso=<?= $DB_login ?>&janelaWidth=' + sizeWidth + '&janelaHeight=' + sizeHeight, wname, 'width=' + sizeWidth + ',height=' + sizeHeight + ',fullscreen=1,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0');
-        jan.moveTo(0, 0);
-      } else if (nav.indexOf('Microsoft') != -1) {
-
-        ver = navigator.appVersion;
-        ver = ver.substr(ver.indexOf("MSIE"));
-        ver = ver.substr(0, ver.search(";"));
-        ver = ver.substr(5);
-        ver = new Number(ver);
-        if (ver <= 5.5) {
-
-          window.opener.alert('<?= _M(MENSAGEM . 'navegador_5_5'); ?>');
-          window.close();
-        } else {
-
-          jan = window.open('inicio.php?uso=<?= $DB_login ?>&janelaWidth=' + sizeWidth + '&janelaHeight=', wname, 'width=' + sizeWidth + ',height=' + sizeHeight + ',fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0');
-          jan.moveTo(0, 0);
-        }
-      } else if (nav.indexOf('Netscape') != -1) {
-
-        if (parseFloat(navigator.vendorSub) >= 7 && parseFloat(navigator.appVersion) >= 5) {
-
-          jan = window.open('inicio.php?uso=<?= $DB_login ?>&janelaWidth=' + sizeWidth + '&janelaHeight=', wname, 'width=' + sizeWidth + ',height=' + sizeHeight + ',fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0');
-          jan.moveTo(0, 0);
-        } else if (age.substr(0, 7) == "Mozilla") {
-
-          if (isNaN(parseFloat(navigator.vendorSub)) && parseFloat(navigator.appVersion) >= 5) {
-
-            jan = window.open('inicio.php?uso=<?= $DB_login ?>&janelaWidth=' + sizeWidth + '&janelaHeight=', wname, 'width=' + sizeWidth + ',height=' + sizeHeight + ',fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0');
-            jan.moveTo(0, 0);
-          } else if (parseFloat(navigator.vendorSub) >= 1.6 && parseFloat(navigator.appVersion) >= 5) {
-
-            jan = window.open('inicio.php?uso=<?= $DB_login ?>&janelaWidth=' + sizeWidth + '&janelaHeight=', wname, 'width=' + sizeWidth + ',height=' + sizeHeight + ',fullscreen=0,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0');
-            jan.moveTo(0, 0);
-          } else {
-
-            window.opener.alert('<?= _M(MENSAGEM . 'navegador_nao_autorizado'); ?>');
-            window.close();
-          }
-        }
-      } else {
-
-        window.opener.alert('<?= _M(MENSAGEM . 'navegador_nao_autorizado'); ?>');
+      if (window.opener && !window.opener.closed) {
+        window.opener.location.href = 'inicio.php?uso=<?= $DB_login ?>';
         window.close();
-      }
-      if (navigator.cookieEnabled == false) {
-        window.open('cookie.html', '_blank');
+      } else {
+        location.href = 'inicio.php?uso=<?= $DB_login ?>';
       }
     </script>
   </head>
 
-  <body bgcolor="#CCCCCC" onLoad="window.blur()">
+  <body bgcolor="#CCCCCC">
   </body>
 
   </html>
-  <script type="text/javascript">
-    window.close();
-  </script>
 <?php
 }
 ?>

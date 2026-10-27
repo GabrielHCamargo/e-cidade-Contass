@@ -25,16 +25,12 @@ Registry::set('app.config', new AppConfig());
     'app.api' => [
         'centraldeajuda' => 'http://centraldeajuda.dbseller.com.br/help/api/index.php/',
         'esocial' => [
-            'url' => 'http://34.95.213.240/sped-esocial/run.php',
+            'url' => 'http://ecidade_sidecar_gov/sped-esocial/',
             'login' => '',
             'password' => ''
         ]
     ],
-    'app.proxy' => [
-        'http'  => '172.16.212.254:3128',
-        'https' => '172.16.212.254:3128',
-        'tcp'   => '172.16.212.254:3128'
-    ],
+    'app.proxy' => [],
     'app.request.session' => '*.php',
     'app.request.session.readOnlyOn' => '{skins/*,*.js,*.css}',
     'app.request.asset.cacheable.extension' => ['js', 'css', 'jpg', 'jpeg', 'png', 'bmp', 'ttf', 'gif'],
@@ -256,6 +252,8 @@ $oRetorno->iStatus = 1;
 $oRetorno->sMessage = '';
 
 try {
+    @db_query('SELECT fc_startsession();');
+
     switch ($oParam->exec) {
 
         case "getEmpregadores":

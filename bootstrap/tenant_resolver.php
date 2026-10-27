@@ -8,10 +8,10 @@ function resolveTenantDatabase()
 {
 
     if (php_sapi_name() === 'cli') {
-        return env('DB_DATABASE', 'forge');
+        return config('database.connections.pgsql.database', env('DB_DATABASE', 'dbportal'));
     }
 
-    $host   = str_replace('-', '', $_SERVER['HTTP_HOST']);
+    $host   = str_replace('-', '', $_SERVER['HTTP_HOST'] ?? '');
     $tenant =  Str::replaceFirst('.' . config('app.default_host'), '', $host);
 
     $tenants = getTenants();
@@ -19,7 +19,7 @@ function resolveTenantDatabase()
         return $tenant;
     }
 
-    return env('DB_DATABASE', 'forge');
+    return config('database.connections.pgsql.database', env('DB_DATABASE', 'dbportal'));
 }
 
 function getTenants()

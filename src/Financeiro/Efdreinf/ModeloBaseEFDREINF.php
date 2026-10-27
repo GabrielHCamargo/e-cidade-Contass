@@ -45,9 +45,8 @@ abstract class ModeloBaseEFDREINF
         $this->dados    = $dados;
         $this->dadosCGM = $dadosCGM;
         $this->cgc      = $cgc;
-        // $this->envs     = parse_ini_file('config/EfdReinf/.env', true);
-        // $this->url      = $this->envs['URL'];
-        $this->url     = "http://34.95.213.240/sped-efdreinf/";
+        // Redirecionamento autônomo para o microserviço Sidecar local (PHP 8.2)
+        $this->url     = "http://ecidade_sidecar_gov/sped-efdreinf/";
         
     }
 
