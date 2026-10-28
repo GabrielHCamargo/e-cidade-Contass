@@ -4394,7 +4394,7 @@ function criaJanela(nomeJan,arquivo,cabecalho,visivel,topo,esquerda,altura,largu
   tab2Coluna1.className  = 'DBJanelaIframeTitulo';
   tab2Coluna1.style.fontFamily = 'Arial, Helvetica, sans-serif';
   tab2Coluna1.style.fontSize = '11px';
-  tab2Coluna1.innerHTML =  (typeof(cabecalho)=="undefined" || cabecalho=="")?'&nbsp; Contass TI LTDA':('&nbsp;' + cabecalho);
+  tab2Coluna1.innerHTML =  (typeof(cabecalho)=="undefined" || cabecalho=="")?'&nbsp; + Muni Gestão':('&nbsp;' + cabecalho);
 
   tab2Coluna1.setAttribute("nowrap","1");
   tab2Coluna2.setAttribute("nowrap","1");

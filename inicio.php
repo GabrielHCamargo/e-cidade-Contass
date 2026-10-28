@@ -57,7 +57,7 @@ db_logsmanual_demais("Acesso Liberado ao sistema - Login: " . db_getsession("DB_
 <html>
 
 <head>
-  <title>Contass TI LTDA</title>
+    <title>Camargo Sistemas LTDA</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <meta http-equiv="Expires" CONTENT="0">
   <meta name="ecidade:version" content="2.<?php echo "{$db30_codversao}.{$db30_codrelease}"; ?>" />

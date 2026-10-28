@@ -116,7 +116,7 @@ if(!isset($trocaip) && !isset($atualiza)){
 ?>
 <html>
   <head>
-    <title>Contass TI LTDA</title>
+        <title>Camargo Sistemas LTDA</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta http-equiv="Expires" CONTENT="0">
     <script type="text/javascript" src="scripts/prototype.js"></script>

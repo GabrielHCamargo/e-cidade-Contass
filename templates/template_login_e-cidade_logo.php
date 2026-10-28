@@ -53,7 +53,7 @@
 ?>
 <html>
   <head>
-    <title>Tela de acesso para e-cidade</title>
+    <title>Tela de acesso para o + Muni Gestão</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta http-equiv="Expires" CONTENT="0">
 <script language="JavaScript" type="text/javascript" src="scripts/md5.js"></script>
@@ -115,8 +115,8 @@
 <div id='box' style="" align="center" >
   <img class='logo-img' src="imagens/ecidade/logo.png"  style="width: 482px; height:100px; margin-bottom: 12px;">
   <img class='logo-img' src="imagens/ecidade/e_cidade_chave_login.png">
-  <img class="logo-img" src="imagens/ecidade/e_cidade_login.jpg" title="Entre na comunidade e-Cidade no Portal do Software Público."
-       onclick="window.open('http://www.contassconsultoria.com.br','_Blank','')"/>
+  <img class="logo-img" src="imagens/ecidade/e_cidade_login.jpg" title="+ Muni Gestão - Camargo Sistemas"
+       onclick="window.open('http://www.camargosistemas.com.br','_Blank','')"/>
   <img class="logo-img" src="imagens/ecidade/twitter-ico2.png" title="Siga-nos no Twitter" alt="Icone do Twitter"
        style="width: 20px; height:20px; margin-bottom: 12px;" onclick="window.open('http://twitter.com/#!/e_cidade','_Blank','')"/>
 <br/>
@@ -210,17 +210,17 @@
 </tr>
 <tr align="center">
   <td><strong>
-  DBSeller Serviços de Informática Ltda
+  Camargo Sistemas LTDA
   </strong></td>
 </tr>
 <tr align="center">
   <td>
-  <a href='http://www.dbseller.com.br'>www.dbseller.com.br</a>
+  <a href='http://www.camargosistemas.com.br'>www.camargosistemas.com.br</a>
   </td>
 </tr>
 <tr align="center">
   <td><strong>
-  Porto Alegre - RS - Brasil
+  Camargo Sistemas
   </strong></td>
 </tr>
 <tr>

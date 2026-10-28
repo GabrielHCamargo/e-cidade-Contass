@@ -155,7 +155,7 @@
           </div>
 
           <div id="logoDBSeller" ondblclick="<?php if ($lPermiteRotinaEspecial === true) { echo "js_direcionarUsuarioRotinaEspecial();"; } else { echo ""; } ?>" >
-            <h1>Contass</h1>
+            <h1>Camargo Sistemas</h1>
           </div>
 
           <div id="logoPrefeitura" class="hide">

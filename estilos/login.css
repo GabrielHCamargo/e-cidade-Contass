@@ -71,8 +71,12 @@ body.imagem04 {
 }
 
 .logo-ecidade {
-  margin: 0 auto;
+  margin: 15px auto;
   display: block;
+  max-width: 250px;
+  max-height: 90px;
+  width: auto;
+  height: auto;
 }
 
 .logo-db {
