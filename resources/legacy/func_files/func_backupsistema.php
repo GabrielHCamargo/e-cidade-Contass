@@ -24,8 +24,8 @@ foreach ($rows as $row) {
 }
 
 foreach ($array_global as $row) {
-    system("rm -R /var/www/e-cidade/tmp/backup_$row[0]_*");
-    system("pg_dump -U dbportal {$row[0]} | bzip2 -c > /var/www/e-cidade/tmp/backup_{$row[0]}_" . date("dmY") . ".sql.bz2");
+    system("rm -R /var/www/html/tmp/backup_$row[0]_*");
+    system("pg_dump -U dbportal {$row[0]} | bzip2 -c > /var/www/html/tmp/backup_{$row[0]}_" . date("dmY") . ".sql.bz2");
 }
 
-echo json_encode("/var/www/e-cidade/tmp/backup_{$row[0]}_" . date("dmY") . ".sql.bz2");
+echo json_encode("/var/www/html/tmp/backup_{$row[0]}_" . date("dmY") . ".sql.bz2");

@@ -233,7 +233,7 @@
     ,{  "fonte" : "saude/ambulatorial/FinanciamentoSaude.json",                                 "menus" : [8618,8619]  }
     ,{  "fonte" : "tributario/issqn/iss4_processararquivosimplesnacional.json",                 "menus" : [9857,9859]  }
     ,{  "fonte" : "tributario/issqn/iss4_processararquivosimplesnacional001.json",              "menus" : [9859]  }
-    ,{  "fonte" : "patrimonial/protocolo/prot4_processodocumento001.json",                      "menus" : [9852,4079,608572]  }
+    ,{  "fonte" : "patrimonial/protocolo/prot4_processodocumento001.json",                      "menus" : [9852,4079,608572,2163]  }
     ,{  "fonte" : "tributario/issqn/iss1_processararquivosimplesnacional.json",                 "menus" : [9857,9859]  }
     ,{  "fonte" : "financeiro/caixa/cai4_devolucaoadiantamento001.json",                        "menus" : [9840]  }
     ,{  "fonte" : "financeiro/contabilidade/con4_processalancamentos002.json",                  "menus" : [3938]  }

@@ -32,6 +32,13 @@ include("libs/db_utils.php");
 include("libs/db_usuariosonline.php");
 include("dbforms/db_funcoes.php");
 
+db_postmemory($_GET);
+db_postmemory($_POST);
+
+if (!isset($usuario) && isset($_REQUEST["usuario"])) {
+  $usuario = (int)$_REQUEST["usuario"];
+}
+
 $oDaoPermHerda = db_utils::getDao('db_permherda');
 $oDaoPermissao = db_utils::getDao('db_permissao');
 
